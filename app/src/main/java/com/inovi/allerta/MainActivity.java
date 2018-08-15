@@ -1,8 +1,8 @@
 package com.inovi.allerta;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -11,9 +11,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
+import com.inovi.allerta.activity.APACPublicarActivity;
+import com.inovi.allerta.activity.LoginActivity;
 import com.inovi.allerta.fragmentos.PublicacaoFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -63,8 +64,15 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, new PublicacaoFragment()).addToBackStack("").commit();
         } else if (id == R.id.nav_gallery) {
 
+
         } else if (id == R.id.nav_slideshow) {
 
+        }else if(id == R.id.sair) {
+            SharedPreferences preferences = getSharedPreferences("usuario", 0);
+            preferences.edit().clear().commit();
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
