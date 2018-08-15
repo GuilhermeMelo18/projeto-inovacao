@@ -6,4 +6,18 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="pergunta_publicacao">Qual informação você deseja enviar à Defesa Civil?</string>
+    <string name="anexar_foto">Anexar foto</string>
+    <string name="enviar">Enviar</string>
+    <string name="titulo_publicacao">Publicação</string>
+
+    <string name="sem_info">Nenhum texto foi escrito para poder ser enviado.</string>
+    <string name="pouca_info">Texto muito curto. Descreva melhor a situação para que a Defesa Civil possa ajudar mais efetivamente.</string>
+    <string name="no_minimo">No mínimo</string>
+    <string name="cancelado">Cancelado.</string>
+    <string name="caracteres">caracteres.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
