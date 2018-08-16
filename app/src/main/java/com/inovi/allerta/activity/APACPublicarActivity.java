@@ -2,27 +2,19 @@ package com.inovi.allerta.activity;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.inovi.allerta.R;
-import com.inovi.allerta.Utils;
 
 public class APACPublicarActivity extends AppCompatActivity {
     private Button enviar;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_publicar_apac);
+        setContentView(R.layout.activity_publicar_apac);
         this.setTitle("APAC");
 
 //        enviar = findViewById(R.id.btnEnviar);
