@@ -3,14 +3,14 @@ package com.inovi.allerta.modelos;
 public class Alerta {
     private String titulo;
     private String informacao;
-    private Area areaAlerta;
+    private String areaAlerta;
     private boolean statusEnvio;
     private int grauRisco;
 
     public Alerta() {
     }
 
-    public Alerta(String titulo, String informacao, Area areaAlerta, boolean statusEnvio, int grauRisco) {
+    public Alerta(String titulo, String informacao, String areaAlerta, boolean statusEnvio, int grauRisco) {
         this.titulo = titulo;
         this.informacao = informacao;
         this.areaAlerta = areaAlerta;
@@ -34,11 +34,11 @@ public class Alerta {
         this.informacao = informacao;
     }
 
-    public Area getAreaAlerta() {
+    public String getAreaAlerta() {
         return areaAlerta;
     }
 
-    public void setAreaAlerta(Area areaAlerta) {
+    public void setAreaAlerta(String areaAlerta) {
         this.areaAlerta = areaAlerta;
     }
 

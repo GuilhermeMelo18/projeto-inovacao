@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alertas">Alertas</string>
+    <string name="postagens">Postagens</string>
+    <string name="graficos">Gráficos</string>
+    <string name="titulo_defesa_civil">Defesa Civil</string>
+</resources>
