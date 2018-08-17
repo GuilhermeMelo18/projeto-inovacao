@@ -11,6 +11,11 @@
     <string name="anexar_foto">Anexar foto</string>
     <string name="enviar">Enviar</string>
     <string name="titulo_publicacao">Publicação</string>
+    <string name="titulo_populacao">População</string>
+
+    <string name="titulo_configuracoes">Ajustes</string>
+    <string name="titulo_tempo">Tempo</string>
+
 
     <string name="sem_info">Nenhum texto foi escrito para poder ser enviado.</string>
     <string name="pouca_info">Texto muito curto. Descreva melhor a situação para que a Defesa Civil possa ajudar mais efetivamente.</string>
