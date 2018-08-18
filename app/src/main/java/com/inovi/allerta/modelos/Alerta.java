@@ -5,16 +5,15 @@ public class Alerta {
     private String informacao;
     private String areaAlerta;
     private boolean statusEnvio;
-    private int grauRisco;
+    private String grauRisco;
 
     public Alerta() {
     }
 
-    public Alerta(String titulo, String informacao, String areaAlerta, boolean statusEnvio, int grauRisco) {
+    public Alerta(String titulo, String informacao, String areaAlerta, String grauRisco) {
         this.titulo = titulo;
         this.informacao = informacao;
         this.areaAlerta = areaAlerta;
-        this.statusEnvio = statusEnvio;
         this.grauRisco = grauRisco;
     }
 
@@ -50,11 +49,11 @@ public class Alerta {
         this.statusEnvio = statusEnvio;
     }
 
-    public int getGrauRisco() {
+    public String getGrauRisco() {
         return grauRisco;
     }
 
-    public void setGrauRisco(int grauRisco) {
+    public void setGrauRisco(String grauRisco) {
         this.grauRisco = grauRisco;
     }
 
@@ -64,7 +63,6 @@ public class Alerta {
                 "titulo='" + titulo + '\'' +
                 ", informacao='" + informacao + '\'' +
                 ", areaAlerta=" + areaAlerta +
-                ", statusEnvio=" + statusEnvio +
                 ", grauRisco=" + grauRisco +
                 '}';
     }

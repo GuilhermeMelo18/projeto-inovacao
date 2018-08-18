@@ -4,4 +4,6 @@
     <string name="postagens">Postagens</string>
     <string name="graficos">Gráficos</string>
     <string name="titulo_defesa_civil">Defesa Civil</string>
+    <string name="grau_de_risco">Grau de risco:</string>
+    <string name="bairro">Bairro:</string>
 </resources>

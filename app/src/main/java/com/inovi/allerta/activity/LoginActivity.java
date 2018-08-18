@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.inovi.allerta.MainActivity;
+//import com.inovi.allerta.MainActivity;
 import com.inovi.allerta.R;
 import com.inovi.allerta.fragmentos.ListaAlertaFragment;
 
@@ -39,7 +39,8 @@ public class LoginActivity extends AppCompatActivity{
                     finish();
 
                 }else if (login.getText().toString().equals("externo") && senha.getText().toString().equals("123")){
-                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    //Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent i = new Intent(LoginActivity.this, DefesaCivilActivity.class);
                     startActivity(i);
                     finish();
 
