@@ -52,22 +52,9 @@ public class VisualizarPublicacaoFragment extends Fragment {
         // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_visualizar_publicacao, container, false);
 
-        if (BD.publicacoes.size() == 0){
-            publicacoes = BD.popularPublicacoes();
-        } else {
-            publicacoes = BD.publicacoes;
-        }
-
-        Log.i("xii", publicacoes.toString());
-
-        //recebe tudo
-        publicacoesFiltradas = publicacoes;
-
-        if (BD.areas.size() == 0){
-            areas = BD.popularAreas();
-        } else {
-            areas = BD.areas;
-        }
+        publicacoes = BD.publicacoes;
+        publicacoesFiltradas = publicacoes; //recebe tudo
+        areas = BD.areas;
 
         nomeAreas = new ArrayList<>();
         for(Area a: areas){
@@ -87,9 +74,10 @@ public class VisualizarPublicacaoFragment extends Fragment {
                 publicacoesFiltradas = new ArrayList<>();
                 Log.i("eita", ""+position);
                 for (Publicacao p: publicacoes){
-                    Log.i("p", p.toString());
                     if (p.getArea().getCodigo() == position + 1){
                         publicacoesFiltradas.add(p);
+                    } else {
+                        Log.i("np", "xiiiiiiiiiiiiiiiiii");
                     }
                 }
             }

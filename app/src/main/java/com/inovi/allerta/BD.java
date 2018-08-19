@@ -14,16 +14,16 @@ public class BD {
     public static List<Area> areas = new ArrayList<>();
     public static List<Publicacao> publicacoes = new ArrayList<>();
 
-    public static List<Area> popularAreas(){
+    public static void popularAreas(){
         areas.add(new Area(1, "Córrego Jenipapo"));
         areas.add(new Area(2, "Vasco da Gama"));
         areas.add(new Area(3, "Brasília Teimosa"));
         areas.add(new Area(4, "Afogados"));
 
-        return areas;
+        //return areas;
     }
 
-    public static List<Publicacao> popularPublicacoes(){
+    public static void popularPublicacoes(){
         publicacoes.add(new Publicacao("Aqui tá perto de cair a barragem do Botafogo", pop,
                 "dugyb73QGBDVTfsbds", pop.getArea()));
         publicacoes.add(new Publicacao("Que situação, tá quase desmoronando", pop,
@@ -34,6 +34,6 @@ public class BD {
                 "dugyb73QGBDVTfsbds", pop.getArea()));
         publicacoes.add(new Publicacao("Aqui tá perto de cair a barragem do Botafogo", pop,
                 "dugyb73QGBDVTfsbds", pop.getArea()));
-        return publicacoes;
+        //return publicacoes;
     }
 }

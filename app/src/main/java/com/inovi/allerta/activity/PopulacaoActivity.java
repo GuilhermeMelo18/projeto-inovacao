@@ -22,7 +22,7 @@ public class PopulacaoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_populacao);
-        this.setTitle(R.string.titulo_populacao);
+        this.setTitle(R.string.titulo_meu_allerta);
 
         mSectionsPagerAdapter = new PopulacaoActivity.SectionsPagerAdapter(getSupportFragmentManager());
 

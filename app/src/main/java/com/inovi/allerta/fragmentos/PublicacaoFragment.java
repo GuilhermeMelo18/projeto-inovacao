@@ -58,7 +58,6 @@ public class PublicacaoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_publicar, container, false);
-        getActivity().setTitle(R.string.titulo_publicacao);
 
         pop = BD.pop;
         mTxtPergunta = layout.findViewById(R.id.txtPerguntaPublicacao);
@@ -129,7 +128,6 @@ public class PublicacaoFragment extends Fragment {
                 }
             }
         });
-
         return layout;
     }
 
@@ -147,8 +145,6 @@ public class PublicacaoFragment extends Fragment {
                         bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
                         mImagemAnexada.setImageBitmap(bitmap);
                         mImagemAnexada.setVisibility(View.VISIBLE);
-                        //mImagemAnexada.forceLayout();
-
                     } catch (IOException e)
                     {
                         e.printStackTrace();

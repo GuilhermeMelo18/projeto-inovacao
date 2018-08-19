@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 //import com.inovi.allerta.MainActivity;
+import com.inovi.allerta.BD;
 import com.inovi.allerta.R;
 import com.inovi.allerta.fragmentos.ListaAlertaFragment;
 
@@ -17,6 +18,8 @@ public class LoginActivity extends AppCompatActivity{
     private Button entrar;
     private EditText login;
     private EditText senha;
+
+    boolean BDPopulado = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,16 +40,18 @@ public class LoginActivity extends AppCompatActivity{
                     Intent i = new Intent(LoginActivity.this, DefesaCivilActivity.class);
                     startActivity(i);
                     finish();
-
                 }else if (login.getText().toString().equals("pop") && senha.getText().toString().equals("123")){
                     //Intent i = new Intent(LoginActivity.this, MainActivity.class);
                     Intent i = new Intent(LoginActivity.this, PopulacaoActivity.class);
                     startActivity(i);
                     finish();
-
                 }else {
                     Toast.makeText(LoginActivity.this, "Login Inválido", Toast.LENGTH_SHORT).show();
+                }
 
+                if (!BDPopulado){
+                    BD.popularAreas();
+                    BD.popularPublicacoes();
                 }
 
 

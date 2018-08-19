@@ -36,7 +36,7 @@ public class ConfiguracoesFragment extends Fragment {
 
     Populacao pop;
     List<Area> areas;
-    List<String> nomeAreas = new ArrayList<>();
+    List<String> nomeAreas;
 
     ArrayAdapter<String> adapter;
 
@@ -50,12 +50,7 @@ public class ConfiguracoesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         pop = BD.pop;
-
-        if (BD.areas.size() == 0){
-            areas = BD.popularAreas();
-        } else {
-            areas = BD.areas;
-        }
+        areas = BD.areas;
 
         nomeAreas = new ArrayList<>();
         for(Area a: areas){

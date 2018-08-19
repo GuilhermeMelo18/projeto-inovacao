@@ -18,7 +18,7 @@
     <string name="notificacoes">Notificações</string>
     <string name="pessoal">Pessoal</string>
 
-
+    <string name="titulo_meu_allerta">Meu ALLerta</string>
     <string name="filtrar_area">Fitre publicações por área</string>
     <string name="notificacoes_ativadas">Ao confirmar, você receberá notificações da Defesa Civil.</string>
     <string name="notificacoes_desativadas">Ao confirmar, nenhuma notificação da Defesa Civil será mais enviada a você.</string>
