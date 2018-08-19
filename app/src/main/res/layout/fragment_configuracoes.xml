@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/txtNotificacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notificacoes"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:textColor="@color/colorPrimary"/>
+
+      <Switch
+        android:id="@+id/stchNotificaoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pergunta_configuracoes"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/preto"/>
+
+    <TextView
+        android:id="@+id/txtAreaMorando"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/area_morando"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/preto"/>
+
+    <Spinner
+        android:id="@+id/spArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/cinza">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/txtPessoais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pessoal"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/txtAlterarSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alterar_senha"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/preto"/>
+
+    <EditText
+        android:id="@+id/edtxtSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"/>
+    <EditText
+        android:id="@+id/edtxtSenhaConfirmacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"/>
+
+    <Button
+        android:id="@+id/btnAlterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/confirmar"
+        />
+</LinearLayout>

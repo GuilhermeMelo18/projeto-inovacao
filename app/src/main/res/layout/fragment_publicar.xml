@@ -3,13 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="@dimen/fab_margin">
+    >
      <TextView
             android:id="@+id/txtPerguntaPublicacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pergunta_publicacao"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/preto"/>
 
     <!--área da publicação -->
      <EditText
@@ -20,16 +23,19 @@
             android:inputType="textMultiLine"
             android:lines="7"
             android:maxLines="12"
+            android:layout_marginHorizontal="16dp"
             />
 
     <TextView
-        android:id="@+id/txtContadorCaractere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="18dp"
-        android:layout_gravity="right"
-        />
+            android:id="@+id/txtContadorCaractere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_gravity="right"
+            android:textSize="18dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/preto"/>
 
     <!--anexo (foto) -->
      <TextView
@@ -37,13 +43,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/anexar_foto"
+            android:layout_gravity="top"
             android:textSize="18dp"
-            android:layout_gravity="top"/>
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/preto"/>
 
      <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:id="@+id/imgAnexada"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
 
     <!--enviar -->
      <Button
@@ -52,7 +64,5 @@
             android:layout_height="wrap_content"
             android:text="@string/enviar"
             android:layout_gravity="center"
-
             />
-
 </LinearLayout>

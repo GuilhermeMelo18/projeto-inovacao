@@ -17,16 +17,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.inovi.allerta.BD;
 import com.inovi.allerta.R;
 import com.inovi.allerta.Utils;
+import com.inovi.allerta.modelos.Area;
+import com.inovi.allerta.modelos.Populacao;
+import com.inovi.allerta.modelos.Publicacao;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class PublicacaoFragment extends Fragment {
+    private ImageView mImagemAnexada;
     private TextView mTxtPergunta;
     private EditText mEdtPublicacao;
     private TextView mTxtContadorChar;
@@ -35,11 +42,14 @@ public class PublicacaoFragment extends Fragment {
 
     final int SELECT_IMAGE = 1;
 
+    Bitmap bitmap = null;
+    Populacao pop;
+    Publicacao pub;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-
         }
     }
 
@@ -50,11 +60,13 @@ public class PublicacaoFragment extends Fragment {
         View layout = inflater.inflate(R.layout.fragment_publicar, container, false);
         getActivity().setTitle(R.string.titulo_publicacao);
 
+        pop = BD.pop;
         mTxtPergunta = layout.findViewById(R.id.txtPerguntaPublicacao);
         mEdtPublicacao = layout.findViewById(R.id.edtxtAreaPublicacao);
         mTxtAnexar = layout.findViewById(R.id.txtAnexar);
         mBtnEnviar = layout.findViewById(R.id.btnEnviar);
         mTxtContadorChar = layout.findViewById(R.id.txtContadorCaractere);
+        mImagemAnexada = layout.findViewById(R.id.imgAnexada);
 
         mTxtAnexar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,14 +98,34 @@ public class PublicacaoFragment extends Fragment {
         mBtnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("mess", mEdtPublicacao.getEditableText().toString());
-                if(mEdtPublicacao.getEditableText().toString() == null){
-                    Toast.makeText(getActivity(), R.string.sem_info, Toast.LENGTH_SHORT).show();
-                } else if(mEdtPublicacao.getEditableText().toString().length() < Utils.TAMANHO_MINIMO_PUBLICACAO) {
-                    String texto = getResources().getString(R.string.pouca_info) + "\n" + getResources().getString(R.string.no_minimo)
+                String textoPubli = mEdtPublicacao.getText().toString();
+                if(textoPubli == null){
+                    Toast.makeText(getActivity(), R.string.sem_info,
+                            Toast.LENGTH_SHORT).show();
+                } else if(textoPubli.length() < Utils.TAMANHO_MINIMO_PUBLICACAO) {
+                    String texto = getResources().getString(R.string.pouca_info) +
+                            "\n" + getResources().getString(R.string.no_minimo)
                             + String.valueOf(Utils.TAMANHO_MINIMO_PUBLICACAO) + " " +
                             getResources().getString(R.string.caracteres);
                     Toast.makeText(getActivity(), texto, Toast.LENGTH_LONG).show();
+                } else { //pode publicar
+                    if (bitmap != null){//tem imagem
+                        pub = new Publicacao(textoPubli, pop, bitmap, pop.getArea());
+                        pop.getPublicacoes().add(pub);
+                        BD.publicacoes.add(pub);
+                        mEdtPublicacao.setText("");
+                        mImagemAnexada.setImageBitmap(null);
+                        Toast.makeText(getActivity(), R.string.publicacao_enviada,
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        pub = new Publicacao(textoPubli, pop, "skdkfhui3284783286GSCD263VCACQTDg7sdhfyaebt7vv", pop.getArea());
+                        pop.getPublicacoes().add(pub);
+                        BD.publicacoes.add(pub);
+                        mEdtPublicacao.setText("");
+                        Toast.makeText(getActivity(), R.string.publicacao_enviada,
+                                Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });
@@ -112,7 +144,11 @@ public class PublicacaoFragment extends Fragment {
                 {
                     try
                     {
-                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
+                        bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), data.getData());
+                        mImagemAnexada.setImageBitmap(bitmap);
+                        mImagemAnexada.setVisibility(View.VISIBLE);
+                        //mImagemAnexada.forceLayout();
+
                     } catch (IOException e)
                     {
                         e.printStackTrace();

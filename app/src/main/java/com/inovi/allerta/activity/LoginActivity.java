@@ -38,9 +38,9 @@ public class LoginActivity extends AppCompatActivity{
                     startActivity(i);
                     finish();
 
-                }else if (login.getText().toString().equals("externo") && senha.getText().toString().equals("123")){
+                }else if (login.getText().toString().equals("pop") && senha.getText().toString().equals("123")){
                     //Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                    Intent i = new Intent(LoginActivity.this, DefesaCivilActivity.class);
+                    Intent i = new Intent(LoginActivity.this, PopulacaoActivity.class);
                     startActivity(i);
                     finish();
 

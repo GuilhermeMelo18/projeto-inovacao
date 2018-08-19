@@ -9,9 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.inovi.allerta.R;
+import com.inovi.allerta.fragmentos.ConfiguracoesFragment;
 import com.inovi.allerta.fragmentos.GraficoFragment;
 import com.inovi.allerta.fragmentos.PostFragment;
 import com.inovi.allerta.fragmentos.PublicacaoFragment;
+import com.inovi.allerta.fragmentos.VisualizarPublicacaoFragment;
 
 public class PopulacaoActivity extends AppCompatActivity {
     private PopulacaoActivity.SectionsPagerAdapter mSectionsPagerAdapter;
@@ -47,9 +49,9 @@ public class PopulacaoActivity extends AppCompatActivity {
                 case 0:
                     return new PublicacaoFragment();
                 case 1:
-                    return new GraficoFragment();
+                    return new VisualizarPublicacaoFragment();
                 case 2:
-                    return new PostFragment();
+                    return new ConfiguracoesFragment();
             }
             return null;
         }

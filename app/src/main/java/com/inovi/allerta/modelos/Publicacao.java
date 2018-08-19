@@ -1,17 +1,31 @@
 package com.inovi.allerta.modelos;
 
+import android.graphics.Bitmap;
+
 public class Publicacao {
     private String texto;
     private Populacao usuario;
-    private String imagem;
+    private Bitmap imagem;
+    private String caminhoImagem;
+    private Area area;
 
     public Publicacao() {
     }
 
-    public Publicacao(String texto, Populacao usuario, String imagem) {
+    public Publicacao(String texto, Populacao usuario, String caminhoImagem, Area area) {
+        this.texto = texto;
+        this.usuario = usuario;
+        this.caminhoImagem = caminhoImagem;
+        this.imagem = null;
+        this.area = area;
+    }
+
+    public Publicacao(String texto, Populacao usuario, Bitmap imagem, Area area) {
         this.texto = texto;
         this.usuario = usuario;
         this.imagem = imagem;
+        this.caminhoImagem = null;
+        this.area = area;
     }
 
     public String getTexto() {
@@ -30,12 +44,28 @@ public class Publicacao {
         this.usuario = usuario;
     }
 
-    public String getImagem() {
+    public Bitmap getImagem() {
         return imagem;
     }
 
-    public void setImagem(String imagem) {
+    public void setImagem(Bitmap imagem) {
         this.imagem = imagem;
+    }
+
+    public String getCaminhoImagem() {
+        return caminhoImagem;
+    }
+
+    public void setCaminhoImagem(String caminhoImagem) {
+        this.caminhoImagem = caminhoImagem;
+    }
+
+    public Area getArea() {
+        return area;
+    }
+
+    public void setArea(Area area) {
+        this.area = area;
     }
 
     @Override
@@ -43,7 +73,6 @@ public class Publicacao {
         return "Publicacao{" +
                 "texto='" + texto + '\'' +
                 ", usuario=" + usuario +
-                ", imagem='" + imagem + '\'' +
                 '}';
     }
 }
