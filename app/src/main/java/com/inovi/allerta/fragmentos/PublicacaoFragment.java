@@ -118,11 +118,11 @@ public class PublicacaoFragment extends Fragment {
                         Toast.makeText(getActivity(), R.string.publicacao_enviada,
                                 Toast.LENGTH_SHORT).show();
                     } else {
-                        pub = new Publicacao(textoPubli, pop, "skdkfhui3284783286GSCD263VCACQTDg7sdhfyaebt7vv", pop.getArea());
+                        //pub = new Publicacao(textoPubli, pop, "skdkfhui3284783286GSCD263VCACQTDg7sdhfyaebt7vv", pop.getArea());
                         //pop.getPublicacoes().add(pub);
-                        BD.publicacoes.add(pub);
-                        mEdtPublicacao.setText("");
-                        Toast.makeText(getActivity(), R.string.publicacao_enviada,
+                        //BD.publicacoes.add(pub);
+                        //mEdtPublicacao.setText("");
+                        Toast.makeText(getActivity(), R.string.publicacao_sem_imagem,
                                 Toast.LENGTH_SHORT).show();
                     }
 

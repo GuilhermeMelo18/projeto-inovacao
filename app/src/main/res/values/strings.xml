@@ -13,11 +13,12 @@
     <string name="alterar_senha">Alterar senha</string>
     <string name="area_morando">Área que deseja receber os alertas da Defesa Civil</string>
     <string name="publicacao_enviada">Publicação enviada.</string>
+    <string name="publicacao_sem_imagem">Publicação não pode ser enviada. Precisa-se de uma imagem anexada.</string>
 
 
     <string name="notificacoes">Notificações</string>
     <string name="pessoal">Pessoal</string>
-    
+
     <string name="filtrar_area">Filtre publicações por área</string>
     <string name="notificacoes_ativadas">Ao confirmar, você receberá notificações da Defesa Civil.</string>
     <string name="notificacoes_desativadas">Ao confirmar, nenhuma notificação da Defesa Civil será mais enviada a você.</string>
