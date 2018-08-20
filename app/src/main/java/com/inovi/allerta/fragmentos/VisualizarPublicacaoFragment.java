@@ -53,7 +53,6 @@ public class VisualizarPublicacaoFragment extends Fragment {
         View layout = inflater.inflate(R.layout.fragment_visualizar_publicacao, container, false);
 
         publicacoes = BD.publicacoes;
-        publicacoesFiltradas = publicacoes; //recebe tudo
         areas = BD.areas;
 
         nomeAreas = new ArrayList<>();
@@ -67,19 +66,17 @@ public class VisualizarPublicacaoFragment extends Fragment {
         adapterArea.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpAreaFiltro.setAdapter(adapterArea);
 
+        mListPublicacoes = layout.findViewById(R.id.listaPubli);
+        adapterPubli = new PublicacaoAdapter(publicacoes, getActivity());
+        mListPublicacoes.setAdapter(adapterPubli);
+
         mSpAreaFiltro.setSelection(1);
         mSpAreaFiltro.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                publicacoesFiltradas = new ArrayList<>();
-                Log.i("eita", ""+position);
-                for (Publicacao p: publicacoes){
-                    if (p.getArea().getCodigo() == position + 1){
-                        publicacoesFiltradas.add(p);
-                    } else {
-                        Log.i("np", "xiiiiiiiiiiiiiiiiii");
-                    }
-                }
+                //tem de passar o nome do lugar
+                String regiao = nomeAreas.get(position);
+                adapterPubli.getFilter().filter(regiao);
             }
 
             @Override
@@ -87,12 +84,6 @@ public class VisualizarPublicacaoFragment extends Fragment {
 
             }
         });
-
-        mListPublicacoes = layout.findViewById(R.id.listaPubli);
-        Log.i("xii", publicacoesFiltradas.toString());
-        adapterPubli = new PublicacaoAdapter(publicacoesFiltradas, getActivity());
-
-        mListPublicacoes.setAdapter(adapterPubli);
 
         return layout;
     }

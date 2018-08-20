@@ -110,15 +110,16 @@ public class PublicacaoFragment extends Fragment {
                 } else { //pode publicar
                     if (bitmap != null){//tem imagem
                         pub = new Publicacao(textoPubli, pop, bitmap, pop.getArea());
-                        pop.getPublicacoes().add(pub);
+                        //pop.getPublicacoes().add(pub);
                         BD.publicacoes.add(pub);
                         mEdtPublicacao.setText("");
                         mImagemAnexada.setImageBitmap(null);
+                        bitmap = null;
                         Toast.makeText(getActivity(), R.string.publicacao_enviada,
                                 Toast.LENGTH_SHORT).show();
                     } else {
                         pub = new Publicacao(textoPubli, pop, "skdkfhui3284783286GSCD263VCACQTDg7sdhfyaebt7vv", pop.getArea());
-                        pop.getPublicacoes().add(pub);
+                        //pop.getPublicacoes().add(pub);
                         BD.publicacoes.add(pub);
                         mEdtPublicacao.setText("");
                         Toast.makeText(getActivity(), R.string.publicacao_enviada,

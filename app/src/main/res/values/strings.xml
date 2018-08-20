@@ -17,16 +17,17 @@
 
     <string name="notificacoes">Notificações</string>
     <string name="pessoal">Pessoal</string>
-
-    <string name="titulo_meu_allerta">Meu ALLerta</string>
-    <string name="filtrar_area">Fitre publicações por área</string>
+    
+    <string name="filtrar_area">Filtre publicações por área</string>
     <string name="notificacoes_ativadas">Ao confirmar, você receberá notificações da Defesa Civil.</string>
     <string name="notificacoes_desativadas">Ao confirmar, nenhuma notificação da Defesa Civil será mais enviada a você.</string>
     <string name="anexar_foto">Anexar foto</string>
     <string name="enviar">Enviar</string>
     <string name="confirmar">Confirmar</string>
 
-    <string name="titulo_publicacao">Publicação</string>
+    <string name="titulo_meu_allerta">Meu ALLerta</string>
+    <string name="titulo_publicacao">Publicar</string>
+    <string name="titulo_posts_rede">Posts na Rede</string>
     <string name="titulo_populacao">População</string>
     <string name="titulo_configuracoes">Ajustes</string>
     <string name="titulo_tempo">Tempo</string>
