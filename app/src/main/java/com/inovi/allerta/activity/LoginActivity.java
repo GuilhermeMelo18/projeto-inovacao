@@ -52,6 +52,7 @@ public class LoginActivity extends AppCompatActivity{
                 if (!BDPopulado){
                     BD.popularAreas();
                     BD.popularPublicacoes();
+                    BD.popularAlertas();
                 }
 
 

@@ -5,12 +5,12 @@ public class Alerta {
     private String informacao;
     private String areaAlerta;
     private boolean statusEnvio;
-    private String grauRisco;
+    private int grauRisco;
 
     public Alerta() {
     }
 
-    public Alerta(String titulo, String informacao, String areaAlerta, String grauRisco) {
+    public Alerta(String titulo, String informacao, String areaAlerta, int grauRisco) {
         this.titulo = titulo;
         this.informacao = informacao;
         this.areaAlerta = areaAlerta;
@@ -49,11 +49,11 @@ public class Alerta {
         this.statusEnvio = statusEnvio;
     }
 
-    public String getGrauRisco() {
+    public int getGrauRisco() {
         return grauRisco;
     }
 
-    public void setGrauRisco(String grauRisco) {
+    public void setGrauRisco(int grauRisco) {
         this.grauRisco = grauRisco;
     }
 

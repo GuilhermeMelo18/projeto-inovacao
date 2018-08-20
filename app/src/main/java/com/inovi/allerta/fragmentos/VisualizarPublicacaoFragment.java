@@ -3,9 +3,6 @@ package com.inovi.allerta.fragmentos;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +13,7 @@ import android.widget.Spinner;
 
 import com.inovi.allerta.BD;
 import com.inovi.allerta.R;
-import com.inovi.allerta.adapter.AlertasAdapter;
 import com.inovi.allerta.adapter.PublicacaoAdapter;
-import com.inovi.allerta.modelos.Alerta;
 import com.inovi.allerta.modelos.Area;
 import com.inovi.allerta.modelos.Publicacao;
 

@@ -12,6 +12,7 @@ import com.inovi.allerta.R;
 import com.inovi.allerta.fragmentos.GraficoFragment;
 import com.inovi.allerta.fragmentos.ListaAlertaFragment;
 import com.inovi.allerta.fragmentos.PostFragment;
+import com.inovi.allerta.fragmentos.VisualizarPublicacaoFragment;
 
 public class DefesaCivilActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -49,7 +50,7 @@ public class DefesaCivilActivity extends AppCompatActivity {
                 case 1:
                     return new GraficoFragment();
                 case 2:
-                    return new PostFragment();
+                    return new VisualizarPublicacaoFragment();
             }
             return null;
         }
